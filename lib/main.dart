@@ -4,9 +4,11 @@ import 'package:learnprovider/screens/home_screen.dart';
 import 'package:provider/provider.dart';
 
 void main() {
-  runApp(ChangeNotifierProvider<MovieProvider>(
+  runApp(MultiProvider(
+    providers: [
+      ChangeNotifierProvider(create: (context) => MovieProvider()),
+    ],
     child: const MyApp(),
-    create: (context) => MovieProvider(),
   ));
 }
 

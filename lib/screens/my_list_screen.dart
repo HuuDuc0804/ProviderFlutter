@@ -33,7 +33,12 @@ class _MyListScreenState extends State<MyListScreen> {
                           .read<MovieProvider>()
                           .removeFromList(currentMovie);
                     },
-                    child: const Text('Remove')),
+                    child: const Text(
+                      'Remove',
+                      style: TextStyle(
+                        color: Colors.red,
+                      ),
+                    )),
               ),
             );
           }),
